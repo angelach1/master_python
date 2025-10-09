@@ -14,6 +14,7 @@ def nombre_de_la_funcion(parametro1, parametro2):
     return resultado
 
 '''
+'''
 # Ejemplo1
 print("############## Ejemplo 1 ##############")
 # Definición de la función
@@ -45,8 +46,36 @@ nombre = input("Introduce tu nombre: ")
 edad = int(input('Introduce tu edad:'))
 mostrarTuNombre(nombre, edad)
 
+
+
 # Ejemplo 3
 print("############## Ejemplo 3 ##############")
+
+def tabla(numero):
+    print(f'Tabla de multiplicar del número: {numero}')
+
+    for contador in range(11):
+        print(f"{numero} x {contador} = {numero * contador}\n")
+        
+for i in range(1, 11):
+    tabla(i)
+
+    '''
+
+# Ejemplo 4
+print("############## Ejemplo 4 ##############")
+
+# Parámetros opcionales en funciones
+def getEmpleado(nombre, dni = None):
+    print( "EMPLEADO")
+    print(f'Nombre: {nombre}')
+    if dni != None:
+        print(f'DNI: {dni}')
+
+getEmpleado("Ángel Alhambra",)
+
+
+
 
 
 
