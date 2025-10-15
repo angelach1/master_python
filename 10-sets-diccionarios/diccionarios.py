@@ -45,3 +45,5 @@ personas[0]['nombre'] = 'Ángel'
 print('\nListado de contactos:')
 for persona in personas:
     print(f"{persona['nombre']} {persona['apellido']} - {persona['edad']} años")
+
+

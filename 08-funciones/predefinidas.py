@@ -1,59 +1,84 @@
-'''
-Funciones predefinidas (integradas) en Python
+cantantes = ['2pac', 'Drake', 'Jennifer Lopez']
+numeros = [1, 2, 3, 4, 5, 9, 7, -1, 12]
+
+# Ordenar listas
+
+print(numeros)
+numeros.sort()  # Ordena la lista de menor a mayor  
+print(numeros)
+
+# Agregar elementos a una lista
+cantantes.append('Nicky Jam')  # Agrega un elemento al final de la lista
+print(cantantes)
+cantantes.insert(1, 'Ricky Martin')  # Agrega un elemento en la posición indicada
+print(cantantes)
 
 '''
-nombre = "Ángel Alhambra"
+# Eliminar elementos de una lista
+cantantes.remove('Drake')  # Elimina el elemento indicado
+print(cantantes)
+cantantes.pop(2)  # Elimina el elemento en la posición indicada
+print(cantantes)
+cantantes.pop()  # Elimina el último elemento de la lista
+print(cantantes)
+cantantes.clear()  # Elimina todos los elementos de la lista
+print(cantantes) 
+del numeros[0]  # Elimina el elemento en la posición indicada
+print(numeros)
+del numeros  # Elimina la lista completa
+# print(numeros)  # Esto generará un error porque la lista ya no existe
+'''
 
-#funciones generales
-print(type(nombre))
+# Dar la vuelta a una lista
+numeros = [1, 2, 3, 4, 5, 9, 7, -1, 12]
+numeros.reverse()  # Da la vuelta a la lista
+print(numeros)
 
-#Detectar el tipo de dato
-comprobar = isinstance(nombre, str)
+# Buscar dentro de una lista
+print('Drake' in cantantes)  # Devuelve True si el elemento está en la lista
+print('Nicky Jam' in cantantes)  # Devuelve False si el elemento no está en la lista
+print(cantantes.index('Nicky Jam'))  # Devuelve la posición del elemento indicado
+print(numeros.index(3))  # Devuelve la posición del elemento indicado   
+print(3 in numeros)  # Devuelve True si el elemento está en la lista
+print(15 in numeros)  # Devuelve False si el elemento no está en la lista
 
-if comprobar:
-    print("Es una cadena")
-else:
-    print("No es una cadena")
+#Contar elementos en una lista
+print(len(numeros))  # Devuelve el número de elementos en la lista
+print(len(cantantes))  # Devuelve el número de elementos en la lista
 
-if not isinstance(nombre, float):
-    print("No es un número con decimales")
+# Cuántas veces se repite un elemento en una lista
+numeros.append(3)
+print(numeros.count(3))  # Devuelve cuántas veces se repite el elemento indicado
+print(numeros)
+print(cantantes.count('Nicky Jam'))  # Devuelve cuántas veces se repite el elemento indicado
+cantantes.append('Nicky Jam')
+print(cantantes)
 
-# Limpiar espacios
-frase = "   mi contenido   "
-print(frase)
-print(frase.strip())
+# Unir listas
+cantantes2 = ['Karol G', 'Maluma']
+cantantes_completo = cantantes + cantantes2  # Une dos listas
+print(cantantes_completo)
+print(cantantes)
+cantantes.extend(cantantes2)  # Agrega los elementos de una lista a otra
+print(cantantes)
+print(cantantes2)
 
-# Eliminar variables
-year = 2024
-print(year)
-del year
-# print(year) # NameError: name 'year' is not defined
+# Convertir una cadena en una lista
+cadena = "Hola que tal"
+print(cadena)
+print(cadena.split())  # Convierte una cadena en una lista, separando por espacios
+cadena2 = "Hola,que,tal"
+print(cadena2.split(','))  # Convierte una cadena en una lista, separando por comas
+cadena3 = "Hola-que-tal"
+print(cadena3.split('-'))  # Convierte una cadena en una lista, separando por guiones
 
-# Comprobar variable vacía
-texto = ""
-if len(texto) == 0:
-    print("La variable está vacía")
-if texto == "":
-    print("La variable está vacía") 
-if not texto:
-    print("La variable está vacía")
 
-# Encotrar caracteres
-frase = "La vida es bella"
-print(frase.find("vida"))
-print(frase.find("vida123")) # -1 si no lo encuentra
-print(frase.index("vida"))
-# print(frase.index("vida123")) # ValueError si no lo encuentra
 
-# Reemplazar palabras en un string
-nueva_frase = frase.replace("vida", "moto")
-print(nueva_frase)
-print(frase) # No modifica la frase original
 
-# Mayúsculas y minúsculas
-print(nombre.lower())
-print(nombre.upper())
-print(nombre.capitalize()) # Primera letra en mayúscula
-print(nombre.title()) # Primera letra de cada palabra en mayúscula
-print(nombre.swapcase()) # Mayúsculas a minúsculas y viceversa
+
+
+
+
+
+
 
