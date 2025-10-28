@@ -1,7 +1,7 @@
 import sqlite3
 
 # Conectar a la base de datos (o crearla si no existe)
-conexion = sqlite3.connect("pruebas.db")
+conexion = sqlite3.connect("./19-bases-datos/pruebas.db")
 
 # Crear un cursor para ejecutar comandos SQL
 cursor = conexion.cursor()
