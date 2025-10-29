@@ -9,8 +9,7 @@ Proyecto Python - MysqlL
     - Eliminar nota
     - Salir
 '''
-from usuarios import acciones #Importar el módulo acciones del paquete usuarios
-
+from usuarios import acciones # Importar el módulo acciones.py
 
 print('''
 Acciones disponibles:
