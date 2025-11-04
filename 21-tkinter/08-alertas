@@ -1,0 +1,42 @@
+# Mostrar alerta con tkinter
+
+from tkinter import *
+from tkinter import messagebox as mb
+
+ventana = Tk()
+ventana.geometry("800x600")
+
+def mostrar_alerta():
+    #mb.showinfo("Alerta", "¡Este es un mensaje de alerta!")
+    #mb.showwarning("Alerta", "¡Este es un mensaje de advertencia!")
+    mb.showerror("Alerta", "¡Este es un mensaje de error!")
+
+Button(ventana, text="Mostrar Alerta", command=mostrar_alerta).pack(pady=50)
+
+# Mostrar alerta con opciones de Sí/No
+def preguntar_usuario():
+    respuesta = mb.askyesno("Pregunta", "¿Deseas continuar?") # Botones Sí/No
+    if respuesta:
+        mb.showinfo("Respuesta", "Has elegido continuar.")
+    else:
+        mb.showinfo("Respuesta", "Has elegido no continuar.")
+Button(ventana, text="Preguntar Usuario", command=preguntar_usuario).pack(pady=50)
+ 
+ # Salir de la aplicación con confirmación
+def salir_aplicacion():
+    respuesta = mb.askokcancel("Salir", "¿Estás seguro de que deseas salir?") # Botones Aceptar/Cancelar
+    if respuesta:
+        ventana.destroy()
+Button(ventana, text="Salir de la Aplicación", command=salir_aplicacion).pack(pady=50)
+
+# Otra forma de salir de la aplicación con confirmación
+def salir_aplicacion2(nombre_usuario=None):
+    respuesta = mb.askquestion("Salir", "¿Quieres salir de la aplicación?") # Botones Sí/No
+    if respuesta == "yes":
+        mb.showinfo("Saliendo", f"La aplicación se cerrará. Hasta luego {nombre_usuario}")
+        ventana.destroy()
+Button(ventana, text="Salir de la Aplicación 2", command=lambda: salir_aplicacion2("Ángel Alhambra")).pack(pady=50) # Usando lambda para pasar argumento
+
+
+ventana.mainloop()
+
