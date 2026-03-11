@@ -52,10 +52,41 @@
         in culpa qui <i>officia deserunt mollit anim id est laborum.</i></span>
         </blockquote>
     </p> 
+
+    <h3>Formulario</h3>
+    <form action="procesar_formulario.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="Género">Género:</label><br>
+        <input type="radio" id="masculino" name="genero" value="masculino" required>
+        <label for="masculino">Masculino</label><br>
+        <input type="radio" id="femenino" name="genero" value="femenino" required>
+        <label for="femenino">Femenino</label><br>
+        <input type="radio" id="otro" name="genero" value="otro" required>
+        <label for="otro">Otro</label><br><br>
+
+        <select name="pais" id="pais" required>
+            <option value="">Seleccione un país</option>
+            <option value="España">España</option>
+            <option value="México">México</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Colombia">Colombia</option>
+        </select><br><br>
+
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
     <h3>Listado de frutas</h3>     
-    <ol>
-        <li>Manzana</li>
-            <ul>
+    <ol><!-- Lista ordenada -->
+        <li>Manzana</li><!-- Lista anidada -->
+            <ul><!-- Lista desordenada -->
                 <li>Roja</li>
                 <li>Verde</li>
             </ul>
@@ -74,6 +105,29 @@
         <li>Naranja</li>
         <li>Uva</li>
     </ul>
+
+    <h3>Tablas</h3>
+    <table border="1"><!-- Tabla con borde -->
+        <tr><!-- Fila de encabezado -->
+            <th>Nombre</th><!-- Encabezado de columna -->
+            <th>Edad</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>Ana</td><!-- Celda de datos -->
+            <td colspan="2">25</td>
+            <td>Madrid</td>
+        </tr>
+        <tr>
+            <td>Carlos</td>
+            <td>30</td>
+            <td>Barcelona</td>
+        </tr>
+        <tr>
+            <td>María</td>
+            <td>28</td>
+            <td>Valencia</td>
+        </tr>
     
 </body>
 </html>
