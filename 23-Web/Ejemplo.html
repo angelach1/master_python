@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera página web</title>
+</head>
+<body> 
+    <h1>¡Hola, mundo!</h1>
+    <h2>Bienvenidos a mi sitio web</h2>
+    <p>Esta es mi primera página web.</p>  
+    <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+        in culpa qui officia deserunt mollit anim id est laborum."
+    </p>     
+    <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.<br><br> Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+        in culpa qui officia deserunt mollit anim id est laborum."
+    </p>
+    <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+        in culpa qui officia deserunt mollit anim id est laborum."
+    </p>  
+    <hr/>
+        <h2>Imágenes en HTML</h2>
+    <hr/>
+    <p>
+        <img src="imágenes/estudiante1.jpg" alt="Imagen de un estudiante" title="Estudiante 1" width="300" height="300">
+        <img src="imágenes/estudiante2.jpg" alt="Imagen de un estudiante" title="Estudiante 2" width="300" height="300">    
+        <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Imagen de una chica" title="Chica" width="300" height="300">
+        <img src="https://www.w3schools.com/html/img_chania.jpg" alt="Imagen de una ciudad" title="Ciudad" width="300" height="300">
+    </p>
+
+    <h3>Tercer encabezado de la página</h3>
+    <p>
+        "Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. <em>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</em>
+        nisi ut aliquip ex ea commodo consequat.
+        <blockquote>
+        Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla pariatur. <span id="resaltado" class="rojo amarillo">Excepteur sint occaecat cupidatat non proident, sunt
+        in culpa qui <i>officia deserunt mollit anim id est laborum.</i></span>
+        </blockquote>
+    </p> 
+
+    <h3>Formulario</h3>
+    <form action="procesar_formulario.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="Género">Género:</label><br>
+        <input type="radio" id="masculino" name="genero" value="masculino" required>
+        <label for="masculino">Masculino</label><br>
+        <input type="radio" id="femenino" name="genero" value="femenino" required>
+        <label for="femenino">Femenino</label><br>
+        <input type="radio" id="otro" name="genero" value="otro" required>
+        <label for="otro">Otro</label><br><br>
+
+        <select name="pais" id="pais" required>
+            <option value="">Seleccione un país</option>
+            <option value="España">España</option>
+            <option value="México">México</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Colombia">Colombia</option>
+        </select><br><br>
+
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <h3>Listado de frutas</h3>     
+    <ol><!-- Lista ordenada -->
+        <li>Manzana</li><!-- Lista anidada -->
+            <ul><!-- Lista desordenada -->
+                <li>Roja</li>
+                <li>Verde</li>
+            </ul>
+        </li>
+        <li>Banana</li>
+        <li>Naranja</li>
+        <li>Uva</li>
+    </ol>
+    <ul>
+        <li>Manzana</li>
+            <ul>
+                <li>Roja</li>
+                <li>Verde</li>
+            </ul>
+        <li>Banana</li>
+        <li>Naranja</li>
+        <li>Uva</li>
+    </ul>
+
+    <h3>Tablas</h3>
+    <table border="1"><!-- Tabla con borde -->
+        <tr><!-- Fila de encabezado -->
+            <th>Nombre</th><!-- Encabezado de columna -->
+            <th>Edad</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>Ana</td><!-- Celda de datos -->
+            <td colspan="2">25</td>
+            <td>Madrid</td>
+        </tr>
+        <tr>
+            <td>Carlos</td>
+            <td>30</td>
+            <td>Barcelona</td>
+        </tr>
+        <tr>
+            <td>María</td>
+            <td>28</td>
+            <td>Valencia</td>
+        </tr>
+    
+</body>
+</html>
